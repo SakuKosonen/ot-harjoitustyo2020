@@ -1,0 +1,114 @@
+commit 83c1d20e3d171f41f6dc0894e9796ed013ab8dee
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:41:48 2020 +0200
+
+    poisto ja uudelleen nimeäminen
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a9a00c9328f75a52f2d8d421bc68b89fa1270a05
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:38:05 2020 +0200
+
+    tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 35096cb9bcf9328e1f8e6065124c5d87c0205091
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:34:03 2020 +0200
+
+    add -p kokeilu
+
+ eka.txt    | 10 ++++------
+ kolmas.txt |  3 ++-
+ 2 files changed, 6 insertions(+), 7 deletions(-)
+
+commit c93241bbcb1f4c601bbc1cc0048e760d2abc3638
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:31:43 2020 +0200
+
+    uudelleen nimeäminen
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit aa28cb42bf58a0c94d21aad3bf043fb575e25a6c
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:29:49 2020 +0200
+
+    toinen poistettiin
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 85d5ffc39b50225cfe2121708de49f765b26a0a4
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:28:12 2020 +0200
+
+    muutoksia tiedosto.txt sisältöön
+
+ tiedosto.txt | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+commit b383e3b17e96db9c7df6800fa6145b1178098641
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:26:53 2020 +0200
+
+    jeejee
+
+ tiedosto.txt | 69 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 68 insertions(+), 1 deletion(-)
+
+commit ff6c2c0afd9be905944a73b117577b3c031449c0
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:23:47 2020 +0200
+
+    stuffin lisäys
+
+ stuff/jokinTiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 521fb64c3af089a8288036d443a9bf074c98f60e
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:23:01 2020 +0200
+
+    ölisää harjoittelua
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 551bdefee85f072168ceec20fa992c1f0ec55878
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:22:02 2020 +0200
+
+    moi
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 034a1904b7fc3063f665d7298c03de1dc9b37c18
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:20:48 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 0680da3f04a25359beeafb09f7b9c568927f7d88
+Author: SakuKosonen <saku.kosonen96@gmail.com>
+Date:   Tue Mar 17 14:16:59 2020 +0200
+
+    eka kommittaus
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
