@@ -31,7 +31,7 @@ kanssa. Uusia pelaajia voi luoda joka mahdollistaa ominaisuuden pelaajien statis
 
 - "asetukset" asetuksista voi valita vaikeustason 
 
-### Jatkokehitys ideoita
+## Jatkokehitys ideoita
 
 - tikku-ukon kohtaloita voi lisätä monenlaisia
 
