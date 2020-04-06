@@ -7,6 +7,8 @@
 
 [työaikakirjanpito](https://github.com/SakuKosonen/ot-harjoitustyo2020/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)
 
+[arkkitehtuuri](https://github.com/SakuKosonen/ot-harjoitustyo2020/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Komentorivi toiminnot
 
 ### Testaus
@@ -18,5 +20,12 @@ Testit suoritetaan komennolla
 Testikattavuusraportti luodaan komennolla
 
 -mvn jacoco:report
+
+### Checkstyle
+
+- mvn jxr:jxr checkstyle:checkstyle
+
+
+
 
 
