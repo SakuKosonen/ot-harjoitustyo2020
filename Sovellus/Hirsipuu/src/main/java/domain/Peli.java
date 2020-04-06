@@ -1,3 +1,4 @@
+package domain;
 
 import java.util.*;
 
@@ -7,25 +8,31 @@ import java.util.*;
  * and open the template in the editor.
  */
 /**
+ * herra on hyva ja laittaa pisteen javadoc lauseeseeen.
  *
  * @author Saku
  */
 public class Peli {
 
     String sana;
-    String[] tyomaa;
+    String[] keskenerainen;
     HashSet<String> arvatutSet;
     ArrayList<String> arvatutList;
 
+    /**
+     * konstuktori juttu jee.
+     *
+     * @param sana
+     */
     public Peli(String sana) {
-        tyomaa = sana.split("");
+        keskenerainen = sana.split("");
         this.sana = sana;
         String[] kirjaimet = sana.split("");
         for (int i = 0; i < sana.length(); i++) {
             if (kirjaimet[i].equals("-")) {
-                tyomaa[i] = "-";
+                keskenerainen[i] = "-";
             } else {
-                tyomaa[i] = "*";
+                keskenerainen[i] = "*";
             }
         }
         arvatutSet = new HashSet();
@@ -37,15 +44,15 @@ public class Peli {
         return sana;
     }
 
-    public String[] getTyomaa() {
+    public String[] getKeskenerainen() {
 
-        return tyomaa;
+        return keskenerainen;
     }
 
     public String getKeskenerainenSana() {
         String uusiSana = "";
 
-        for (String tyomaa1 : tyomaa) {
+        for (String tyomaa1 : keskenerainen) {
             uusiSana = uusiSana + tyomaa1;
         }
         return uusiSana;
@@ -58,10 +65,10 @@ public class Peli {
         if (arvatutSet.contains(kirjain)) {
             return false;
         } else {
-            for (int i = 0; i < tyomaa.length; i++) {
+            for (int i = 0; i < keskenerainen.length; i++) {
 
                 if (oikeaSana[i].equals(kirjain)) {
-                    setTyomaa(i, kirjain);
+                    setKeskenerainen(i, kirjain);
                     ihanko = true;
                 }
 
@@ -73,14 +80,14 @@ public class Peli {
 
     }
 
-    public void setTyomaa(int n, String kirjain) {
-        tyomaa[n] = kirjain;
+    public void setKeskenerainen(int n, String kirjain) {
+        keskenerainen[n] = kirjain;
     }
 
     public boolean voitto() {
         boolean ihanko = true;
         String[] vastaus = sana.split("");
-        for (int i = 0; i < tyomaa.length; i++) {
+        for (int i = 0; i < keskenerainen.length; i++) {
             if (!arvatutSet.contains(vastaus[i])) {
                 ihanko = false;
             }
@@ -91,8 +98,8 @@ public class Peli {
     public List getArvatut() {
         return arvatutList;
     }
-    
-    public boolean arvaaSanaa(String arvaus){
+
+    public boolean arvaaSanaa(String arvaus) {
         return arvaus.equals(sana);
     }
 

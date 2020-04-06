@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import domain.Peli;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -40,5 +42,55 @@ public class PeliTest {
         peli.arvaa("i");
         peli.arvaa("r");
         assertEquals(true, peli.voitto());
+    }
+
+    @Test
+    public void getSanaPalauttaaOikeanSananTest() {
+        Peli peli = new Peli("kettuterrieri");
+        assertEquals(peli.getSana(), "kettuterrieri");
+    }
+
+    @Test
+    public void keskenerainenSanaOnKeskenerainenSanaTest() {
+        Peli peli = new Peli("kettuterrieri");
+        peli.arvaa("k");
+        peli.arvaa("e");
+        peli.arvaa("t");
+        peli.arvaa("u");
+        peli.arvaa("i");
+
+        assertEquals(peli.getKeskenerainenSana(), "kettute**ie*i");
+    }
+
+    @Test
+    public void sanaJossaViivaSisaltaaViivanKeskeneraisenaTest() {
+        Peli peli = new Peli("kettu-terrieri");
+        assertEquals(peli.getKeskenerainenSana(), "*****-********");
+    }
+
+    @Test
+    public void sanaaVoiArvataTest() {
+        Peli peli = new Peli("kettuterrieri");
+
+        assertEquals(peli.arvaaSanaa("kettuterrieri"), true);
+    }
+
+    @Test
+    public void arvatutListaOnOikea() {
+        Peli peli = new Peli("kettuterrieri");
+        peli.arvaa("k");
+        peli.arvaa("e");
+        peli.arvaa("t");
+        peli.arvaa("u");
+        peli.arvaa("i");
+        
+        ArrayList<String> oikea = new ArrayList();
+        oikea.add("k");
+        oikea.add("e");
+        oikea.add("t");
+        oikea.add("u");
+        oikea.add("i");
+        
+        assertEquals(peli.getArvatut(),oikea);
     }
 }
