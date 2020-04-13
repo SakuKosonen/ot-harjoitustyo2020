@@ -33,7 +33,7 @@ kanssa. Uusia pelaajia voi luoda joka mahdollistaa ominaisuuden pelaajien statis
 
 ## Jatkokehitys ideoita
 
-- tikku-ukon kohtaloita voi lisätä monenlaisia
+- tikku-ukolle voi lisätä erilaisia kohtaloita
 
 - asetuksista voi vaihtaa pelin väri ja tyylimaailmaa
 
