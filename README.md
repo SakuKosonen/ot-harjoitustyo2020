@@ -31,7 +31,7 @@ Jarin generointi komennolla
 
 - mvn package
 
-### Releaset
+## Releaset
 
 [viikko5](https://github.com/SakuKosonen/ot-harjoitustyo2020/releases/tag/viikko5)
 
