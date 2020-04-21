@@ -25,7 +25,11 @@ Testikattavuusraportti luodaan komennolla
 
 - mvn jxr:jxr checkstyle:checkstyle
 
+### Jar
 
+Jarin generointi komennolla
+
+-mvn package
 
 
 

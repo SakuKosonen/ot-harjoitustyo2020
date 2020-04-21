@@ -83,14 +83,47 @@ public class PeliTest {
         peli.arvaa("t");
         peli.arvaa("u");
         peli.arvaa("i");
-        
+
         ArrayList<String> oikea = new ArrayList();
         oikea.add("k");
         oikea.add("e");
         oikea.add("t");
         oikea.add("u");
         oikea.add("i");
-        
-        assertEquals(peli.getArvatut(),oikea);
+
+        assertEquals(peli.getArvatut(), oikea);
+    }
+
+    @Test
+    public void taytto() {
+        Peli peli = new Peli("kanakettu");
+        peli.taytaSana();
+        assertEquals(true,peli.voitto());
+    }
+
+    @Test
+    public void havio() {
+        Peli peli = new Peli("kanakettu");
+        peli.arvaa("w");
+        peli.arvaa("r");
+        peli.arvaa("i");
+        peli.arvaa("c");
+        peli.arvaa("l");
+        peli.arvaa("ö");
+        peli.arvaa("z");
+        peli.arvaa("q");
+        assertEquals(true,peli.havio());
+    }
+    
+    @Test
+    public void voitto() {
+        Peli peli = new Peli("kanakettu");
+        peli.arvaa("k");
+        peli.arvaa("a");
+        peli.arvaa("n");
+        peli.arvaa("e");
+        peli.arvaa("t");
+        peli.arvaa("u");
+        assertEquals(true, peli.voitto());
     }
 }

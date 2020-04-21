@@ -26,6 +26,7 @@ public class AakkosGrid {
         painettu = "ei painettu";
         laabeli = new Label(painettu);
         
+        
 
         for (int i = 0; i < aakkoset.getAakkosetLista().size(); i++) {
             int rivi = 0;
@@ -45,6 +46,7 @@ public class AakkosGrid {
             aakkonen.setOnAction((event) -> {
                 painettu = jotain;
                 laabeli.setText(painettu);
+                
             });
             aakkosGrid.add(aakkonen, kohta, rivi);
         }

@@ -6,8 +6,16 @@
 package ui.components;
 
 import domain.Peli;
+import java.util.ArrayList;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 /**
  *
@@ -15,47 +23,91 @@ import javafx.scene.layout.GridPane;
  */
 public class SanaGrid {
 
-    GridPane sanagrid;
+    VBox sanagrid;
     String arvatut;
     String sana;
     Peli peli;
+    Text[] text;
+    HBox kirjaimia;
 
-    public SanaGrid(String sana) {
-        this.peli = new Peli(sana);
-        this.sana = sana;
-        sanagrid = new GridPane();
+    public SanaGrid(Peli sana) {
+        this.peli = sana;
+       // this.sana = sana;
+        sanagrid = new VBox();
         arvatut = "";
+        text = new Text[peli.getSana().length()];
 
-        for (int i = 0; i < peli.getSana().length(); i++) {
-            sanagrid.add(new Label(" "), i, 2);
+        HBox viivoja = new HBox();
+        viivoja.setSpacing(20);
+
+        Line[] viivat = new Line[peli.getSana().length()];
+        int xStart = 375;
+        int lineLength = 25;
+        int lineSpacing = 35;
+
+        for (int i = 0; i < viivat.length; i++) {
+
+            int xcoord = xStart + (lineSpacing * i);
+
+            viivat[i] = new Line(xcoord, 225, xcoord - lineLength, 225);
+            viivat[i].setStroke(Color.BLACK);
+            viivat[i].setStrokeWidth(3);
+            viivoja.getChildren().add(viivat[i]);
 
         }
+
+        kirjaimia = new HBox();
+        kirjaimia.setSpacing(34);
+
+        for (int i = 0; i < text.length; i++) {
+
+            text[i] = new Text(peli.getSana().substring(i, i + 1).toUpperCase());
+            text[i].setFont(new Font(30));
+
+            text[i].setVisible(false);
+            kirjaimia.getChildren().add(text[i]);
+
+        }
+
+        sanagrid.getChildren().add(kirjaimia);
+        sanagrid.getChildren().add(viivoja);
+        HBox kokeilu = new HBox();
+        kokeilu.setSpacing(30);
 
     }
 
     public void paivita(String arvaus) {
+
         peli.arvaa(arvaus);
-       // arvatut = arvatut + arvaus;
-        GridPane uusigrid = new GridPane();
-        String[] jotain = peli.getSana().split("");
 
-        for (int i = 0; i < sana.length(); i++) {
+        for (int i = 0; i < text.length; i++) {
+            String tama = text[i].getText();
 
-            if (!peli.getArvatut().contains(jotain[i])) {
-               
-            } else {
-                
-                sanagrid.add(new Label(jotain[i]), i, 2);
+            String tuo = peli.getKeskenerainen()[i].toUpperCase();
+
+            if (tama.equals(tuo)) {
+                kirjaimia.getChildren().get(i).setVisible(true);
             }
-
         }
-        
-        //sanagrid = uusigrid;
+
     }
 
-    public GridPane getSanagrid() {
+    public boolean voitettiinko() {
+        return peli.voitto();
+    }
+
+    public boolean havittiinko() {
+        return peli.havio();
+    }
+
+    public VBox getSanagrid() {
         return sanagrid;
     }
     
+    public void tayta() {
+        peli.taytaSana();
+        paivita("");
+    }
     
+
 }

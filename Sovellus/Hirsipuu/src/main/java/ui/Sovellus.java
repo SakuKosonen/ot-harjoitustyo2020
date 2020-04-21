@@ -1,21 +1,6 @@
 package ui;
 
-import ui.components.SanaGrid;
-import ui.components.AakkosGrid;
-import domain.Aakkoset;
-import domain.Peli;
-import java.util.ArrayList;
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.Event;
-import javafx.event.EventType;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import ui.components.PeliScene;
 
