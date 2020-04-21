@@ -15,11 +15,11 @@
 
 Testit suoritetaan komennolla 
 
--mvn test
+- mvn test
 
 Testikattavuusraportti luodaan komennolla
 
--mvn jacoco:report
+- mvn jacoco:report
 
 ### Checkstyle
 
@@ -29,7 +29,9 @@ Testikattavuusraportti luodaan komennolla
 
 Jarin generointi komennolla
 
--mvn package
+- mvn package
 
+### Releaset
 
+[viikko5](https://github.com/SakuKosonen/ot-harjoitustyo2020/releases/tag/viikko5)
 
