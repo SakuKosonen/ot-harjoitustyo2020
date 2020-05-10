@@ -5,7 +5,7 @@
 
 Luokka ja pakkauskaavio
 
-(kuva)
+![kuva](https://github.com/SakuKosonen/ot-harjoitustyo2020/blob/master/dokumentaatio/rakenne.png)
 
 Sovelluksen käyttöliittymän rakentava koodi ja sovellus logiikka on koitettu eriyttää. Sovellus on jaettu 
 sovelluslogiikaksi(domain) ja käyttöliittymäksi (ui) joka koostuu käyttöliittymä palasista (komponents). Peli sisältää paljon 
