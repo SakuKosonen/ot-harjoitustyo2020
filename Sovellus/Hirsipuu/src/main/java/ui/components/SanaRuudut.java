@@ -6,11 +6,9 @@
 package ui.components;
 
 import domain.Peli;
-import java.util.ArrayList;
-import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
+import javafx.geometry.Orientation;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
@@ -21,50 +19,61 @@ import javafx.scene.text.Text;
  *
  * @author Saku
  */
-public class SanaGrid {
+public class SanaRuudut {
 
     VBox sanagrid;
     String arvatut;
     String sana;
     Peli peli;
     Text[] text;
-    HBox kirjaimia;
+    TilePane kirjaimia;
 
-    public SanaGrid(Peli sana) {
+    public SanaRuudut(Peli sana) {
         this.peli = sana;
-       // this.sana = sana;
+        peli.pelaa();
+   
         sanagrid = new VBox();
         arvatut = "";
         text = new Text[peli.getSana().length()];
 
-        HBox viivoja = new HBox();
-        viivoja.setSpacing(20);
+        TilePane viivoja = new TilePane(Orientation.HORIZONTAL);
+
+        viivoja.setHgap(12.0);
+        viivoja.setVgap(8.0);
 
         Line[] viivat = new Line[peli.getSana().length()];
-        int xStart = 375;
-        int lineLength = 25;
-        int lineSpacing = 35;
+        int xStart = 20;
+        int lineLength = 24;
+        
 
         for (int i = 0; i < viivat.length; i++) {
 
-            int xcoord = xStart + (lineSpacing * i);
+            int xcoord = xStart;
 
-            viivat[i] = new Line(xcoord, 225, xcoord - lineLength, 225);
+            viivat[i] = new Line(xcoord, 0, xcoord - lineLength, 0);
             viivat[i].setStroke(Color.BLACK);
             viivat[i].setStrokeWidth(3);
+            if (peli.getSana().substring(i, i + 1).equals(" ")) {
+                viivat[i].setVisible(false);
+            }
             viivoja.getChildren().add(viivat[i]);
 
         }
 
-        kirjaimia = new HBox();
-        kirjaimia.setSpacing(34);
+        kirjaimia = new TilePane(Orientation.HORIZONTAL);
+
+        kirjaimia.setPrefTileWidth(26.5);
+        kirjaimia.setHgap(12.0);
+        kirjaimia.setVgap(8.0);
 
         for (int i = 0; i < text.length; i++) {
 
             text[i] = new Text(peli.getSana().substring(i, i + 1).toUpperCase());
             text[i].setFont(new Font(30));
-
             text[i].setVisible(false);
+            if (text[i].getText().equals("-")) {
+                text[i].setVisible(true);
+            }
             kirjaimia.getChildren().add(text[i]);
 
         }
@@ -77,9 +86,12 @@ public class SanaGrid {
     }
 
     public void paivita(String arvaus) {
-
-        peli.arvaa(arvaus);
-
+        boolean loytyiAinakinYksi = false;
+        if (!arvaus.equals("")) {
+            peli.arvaa(arvaus);
+            
+        }
+        
         for (int i = 0; i < text.length; i++) {
             String tama = text[i].getText();
 
@@ -87,27 +99,55 @@ public class SanaGrid {
 
             if (tama.equals(tuo)) {
                 kirjaimia.getChildren().get(i).setVisible(true);
+                loytyiAinakinYksi = true;
             }
         }
+        
+        
 
     }
 
+    public boolean arvaaSanaa(String sana) {
+        
+        
+       
+        
+        return peli.arvaaSanaa(sana);
+    }
+
     public boolean voitettiinko() {
+        
         return peli.voitto();
     }
 
     public boolean havittiinko() {
+        
         return peli.havio();
     }
 
     public VBox getSanagrid() {
         return sanagrid;
     }
-    
+
     public void tayta() {
         peli.taytaSana();
         paivita("");
     }
+    
+    public void arvaa() {
+        peli.arvaa();
+    }
+    
+    public void arvaaOikein() {
+        peli.arvaaOikein();
+    }
+    
+    public void voita() {
+        peli.voita();
+    }
+    
+    
+    
     
 
 }

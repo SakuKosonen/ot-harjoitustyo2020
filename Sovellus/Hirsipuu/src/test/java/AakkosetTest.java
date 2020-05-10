@@ -6,10 +6,6 @@
 
 import domain.Aakkoset;
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -30,7 +26,7 @@ public class AakkosetTest {
 
         String testiString = testiLista.get(0) + testiLista.get(testiLista.size() - 1);
 
-        assertEquals(testiString, "aö");
+        assertEquals(testiString, "aö".toUpperCase());
     }
 
     @Test
@@ -38,11 +34,7 @@ public class AakkosetTest {
         Aakkoset testi = new Aakkoset();
         String testiString = testi.getAakkosetString();
         
-        assertEquals(testiString, "abcdefghijklmnopqrstuvwxyzåäö");
+        assertEquals(testiString, "abcdefghijklmnopqrstuvwxyzåäö".toUpperCase());
     }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
 }

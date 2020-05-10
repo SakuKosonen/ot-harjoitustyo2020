@@ -6,10 +6,6 @@
 
 import domain.Peli;
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -23,9 +19,6 @@ public class PeliTest {
 
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
     @Test
     public void sanaAluksiTahtinaTest() {
         Peli peli = new Peli("kettuterrieri");
@@ -125,5 +118,15 @@ public class PeliTest {
         peli.arvaa("t");
         peli.arvaa("u");
         assertEquals(true, peli.voitto());
+    }
+    
+    @Test
+    public void arvatutStringTest() {
+        Peli peli = new Peli("kanakettu");
+        peli.arvaa("u");
+        peli.arvaa("e");
+        peli.arvaa("c");
+        assertEquals(" C", peli.getArvatutString());
+        
     }
 }

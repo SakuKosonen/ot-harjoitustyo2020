@@ -1,28 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ui.components;
 
-import java.util.ArrayList;
+
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
-import javafx.scene.shape.Shape;
+
 
 /**
- *
- * @author Saku
+ * Luokka joka sisältää hirvettävän tikku-ukon.
  */
 public class Kuva {
 
     Pane pane;
     int mones;
-
+    
+    /**
+     * Kuva luokan konstruktori joka tekee hirtettävän tikku-ukon näkymättömänä.
+     */    
     public Kuva() {
         mones = 0;
         pane = new Pane();
@@ -36,7 +34,7 @@ public class Kuva {
         puu1.setStrokeWidth(5);
         puu1.setVisible(false);
         children.add(puu1);
-        
+
         Line puu2 = new Line(25, 25, 200, 25);
         puu2.setStroke(Color.BROWN);
         puu2.setStrokeWidth(5);
@@ -81,15 +79,34 @@ public class Kuva {
         children.add(oikeaJalka);
 
     }
-
+    
+    /**
+     * Metodi palauttaa implementoitavan kuvan sopivana nodena.
+     * 
+     * @return hirtettävä tikku-ukko.
+     */    
     public Pane getKuva() {
         return pane;
     }
-
+    
+    /**
+     * Metodi laittaa kuvan seuraavan palasen näkyväksi.
+     */    
     public void taydenna() {
-        
+
         pane.getChildren().get(mones).setVisible(true);
         mones++;
+    }
+    
+    /**
+     * Metodi laittaa vain tikku-ukon näkyväksi.
+     */   
+    public void taydennaUkko() {
+        for (int i = 0; i < 8; i++) {
+            if (i > 2) {
+                pane.getChildren().get(i).setVisible(true);
+            }
+        }
     }
 
 }

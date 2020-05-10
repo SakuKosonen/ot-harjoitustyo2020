@@ -14,19 +14,17 @@ import javafx.scene.layout.GridPane;
  *
  * @author Saku
  */
-public class AakkosGrid {
+public class AakkosNappaimet {
 
     GridPane aakkosGrid;
     String painettu;
-    Label laabeli;
+    Label painettuKirjainLabel;
 
-    public AakkosGrid() {
+    public AakkosNappaimet() {
         Aakkoset aakkoset = new Aakkoset();
         aakkosGrid = new GridPane();
         painettu = "ei painettu";
-        laabeli = new Label(painettu);
-        
-        
+        painettuKirjainLabel = new Label(painettu);
 
         for (int i = 0; i < aakkoset.getAakkosetLista().size(); i++) {
             int rivi = 0;
@@ -44,13 +42,15 @@ public class AakkosGrid {
             String jotain = (String) aakkoset.getAakkosetLista().get(i);
 
             aakkonen.setOnAction((event) -> {
-                painettu = jotain;
-                laabeli.setText(painettu);
-                
+                painettu = jotain.toLowerCase();
+                painettuKirjainLabel.setText(painettu);
+                aakkonen.setVisible(false);
             });
+            
+            
             aakkosGrid.add(aakkonen, kohta, rivi);
         }
-        aakkosGrid.add(laabeli, aakkoset.getAakkosetLista().size(), 3);
+       
     }
 
     public String getPainettu() {
@@ -61,8 +61,8 @@ public class AakkosGrid {
         return aakkosGrid;
     }
 
-    public Label getLaabeli() {
-        return laabeli;
+    public Label getPainettuKirjainLabel() {
+        return painettuKirjainLabel;
     }
 
 }

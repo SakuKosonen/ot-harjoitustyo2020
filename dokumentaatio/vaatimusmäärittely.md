@@ -2,34 +2,34 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen avulla pelaajien on mahdollista pelata hirsipuuta. Hirsipuuta voi pelata yksin tai useamman pelaajan 
-kanssa. Uusia pelaajia voi luoda joka mahdollistaa ominaisuuden pelaajien statistiikkojen seuraamiselle.
+Sovelluksellus mahdollistaa hirsipuun pelaamisen joko yksin tai seurassa.
 
 ## Perusversion tarjoama toiminnallisuus
 
 ### Pelin aikana
 
-- ruudulle tulee sanan/lauseen verran tyhjiä ruutuja
+- ruudulle tulee sanan/lauseen merkkien verran tyhjiä kirjainpaikkoja 
 
 - jokaisesta oikeasta vastauksesta sana/lause täyttyy
 
-- jokaisesta väärästä vastauksesta piirros tikku-ukon mahdollisesta kohtalosta piirtyy
+- jokaisesta väärästä vastauksesta piirros tikku-ukon mahdollisesta kohtalosta etenee
 
-- arvatut väärät kirjaimet merkataan mahdollisesti kuvan alle
+- arvatut väärät kirjaimet merkataan mahdollisesti kuvan oikealle puolelle
 
-- arvauksen jälkeen pelaaja vaihtuu jos pelaajia on enemmän kuin yksi
+- pelin aikana voi arvata kokonaista sanaa tai lausetta
 
-- voiton tai häviön jälkeen voi voi valita kuka päättää seuraavan arvattavan tai "satunnainen sana" tai "lopeta peli" 
+- peli ilmoittaa myös tekstillä milloin peli on voitettu tai hävitty ja milloin vastaus oli oikea tai väärä
+
+- pelistä voi siirtyä milloin vain takaisin aloitusruutuun aloittaakseen uuden pelin 
 
 ### Pelin ulkopuolella
 
-- Sovellukseen voi lisätä pelaajan
+- peli kerää pelitilastoja arvauksista ja peleistä ja kertoo arvaus- ja voittoprosentit 
 
-- "Statististiikka" ruutu joka näyttää pelaajien statistiikat
+- pelaaja voi valita satunnaisen pelin tai keksiä pelattavan sanan itse
 
-- "uusi peli" voi valita pelaajat ja keksiä itse sanan tai valita satunnaisen sanan
+- pelitilastot voi nollata
 
-- "asetukset" asetuksista voi valita vaikeustason 
 
 ## Jatkokehitys ideoita
 
@@ -37,6 +37,9 @@ kanssa. Uusia pelaajia voi luoda joka mahdollistaa ominaisuuden pelaajien statis
 
 - asetuksista voi vaihtaa pelin väri ja tyylimaailmaa
 
+- käyttöliittymän yleinen kaunistaminen
+
 - asetuksista voi vaihtaa tietokantaa josta satunnaiset sanat/lauseet otetaan
 
-- aloitus ruutu josta voi valita mahdollisia toisia pelejä
+- asetukset joista voisi muuttaa myös vaikeustasoa
+
