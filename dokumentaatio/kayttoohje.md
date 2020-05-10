@@ -9,14 +9,8 @@ lataa [uusin release](https://github.com/SakuKosonen/ot-harjoitustyo2020/release
 
 - laita kaikki ladatut tiedostot saman hakemiston alle
   
-- varmista että statistiikka.txt on muotoa 
+- varmista että statistiikka.txt sisältää vain 4 kokonaislukua ja jokainen kokonaisluku on omalla rivillään
 
-	 0	
-	 0	
-	 0
-	 0
-
-- numerot voivat olla mitä vain kokonaislukuja
 
 ## Ohjelman käynnistäminen
 
