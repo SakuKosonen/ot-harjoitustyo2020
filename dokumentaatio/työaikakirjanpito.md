@@ -15,5 +15,5 @@
 |  5.5    | 3    | aloitusruutu ja pelaaja luokan hylkääminen            |
 |  8.5    | 4    | statistiikka luokka ja sen implementointi ohjelmaan   |
 |  9.5    | 4    | sovelluksen viimeistely ja testailua, dokumentointi   |
-| 10.5    | 5    | lopullinen dokumentointi, javaDoc, checkstyle yms     |
-| summa   | 46   |                                                       |
+| 10.5    | 7    | lopullinen dokumentointi, javaDoc, checkstyle yms     |
+| summa   | 48   |                                                       |
