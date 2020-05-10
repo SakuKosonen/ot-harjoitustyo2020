@@ -1,6 +1,6 @@
 # Hirsipuu (ohjelmistotekniikka 2020 harjoitutyö)
 
-Sovelluksella voi pelata hirsipuuta ja samalla seuraamaan peli tilastojasi. Pelissä voi valita oman sanan tai lauseen tai pelata 
+Sovelluksella voi pelata hirsipuuta ja samalla seurata peli tilastoja. Pelissä voi valita oman sanan tai lauseen tai pelata 
 satunnaisella sanalla.
 
 ## Dokumentaatio
@@ -47,6 +47,6 @@ JavaDoc generointi komennolla
 
 ## Releaset
 
-[viikko5](https://github.com/SakuKosonen/ot-harjoitustyo2020/releases/tag/viikko5)
+[viikko5](https://github.com/SakuKosonen/ot-harjoitustyo2020/releases/tag/viikko5),
 [viikko7](https://github.com/SakuKosonen/ot-harjoitustyo2020/releases/tag/viikko7)
 
