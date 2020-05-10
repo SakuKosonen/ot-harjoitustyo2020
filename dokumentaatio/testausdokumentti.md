@@ -1,4 +1,4 @@
-#Testausdokumentti
+# Testausdokumentti
 
 Ohjelmaa on testattu JUnit testeillä sekä manuaalisesti
 
@@ -9,7 +9,7 @@ Ohjelmaa on testattu JUnit testeillä sekä manuaalisesti
 Jokaiselle domain hakemistossa sijaitsevalle luokalle on oma JUnit testiluokka.
 Testauksen rivikattavuus sovellus logiikassa on 92% ja haarautumakattavuus 86%.
 
-(kuva tulee tähän)
+![jacoco](https://github.com/SakuKosonen/ot-harjoitustyo2020/blob/master/dokumentaatio/jacoco%20report.png)
 
 ### Järjestelmätestaus
 
