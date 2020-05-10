@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksellus mahdollistaa hirsipuun pelaamisen joko yksin tai seurassa.
+Sovellus mahdollistaa hirsipuun pelaamisen ja peli tilastojen seuraamisen.
 
 ## Perusversion tarjoama toiminnallisuus
 
