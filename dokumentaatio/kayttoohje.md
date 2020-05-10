@@ -12,8 +12,11 @@ lataa [uusin release](https://github.com/SakuKosonen/ot-harjoitustyo2020/release
 - varmista että statistiikka.txt on muotoa 
 
 	> 0
+	> 
 	> 0
+	>
 	> 0
+	>
 	> 0
 
 - numerot voivat olla mitä vain kokonaislukuja
